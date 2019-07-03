@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-compact-disc"></i>
+    <%= @artist.name %>
+    <%= link_to edit_artist_path(@artist) do %>
+      <i class="fas fa-pencil-alt"></i>
+    <% end %>
+  </div>
+  <div class="card-body">
+    <p>Profile: <%= @artist.profile %></p>
+    <p>
+      <%= link_to 'Releases', artist_releases_path(@artist) %>
+    </p>
+  </div>
+</div>

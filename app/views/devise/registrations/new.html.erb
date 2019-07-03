@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="card card-login mx-auto mt-5">
+    <div class="card-header">Nova conta</div>
+    <div class="card-body">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="form-group">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+            <input autofocus="autofocus" autocomplete="email" type="email" value="" name="user[email]" id="user_email" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <div>
+            <label for="password-confirmation" class="control-label">Digite sua senha</label>
+            <div class="input-group">
+              <span class="input-group-addon calendar"><i class="fas fa-key" aria-hidden="true"></i></span>
+              <input autocomplete="new-password" type="password" name="user[password]" id="user_password" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div>
+            <label for="password-confirmation" class="control-label">Confirme sua senha</label>
+            <div class="input-group">
+              <span class="input-group-addon calendar"><i class="fas fa-key" aria-hidden="true"></i></span>
+              <input autocomplete="new-password" type="password" name="user[password_confirmation]" id="user_password_confirmation" class="form-control">
+            </div>
+          </div>
+        </div>
+        <div class="actions">
+          <input type="submit" class="btn btn-primary btn-lg btn-block" name="commit" id="submit" value="Criar conta" data-disable-with="Criar conta">
+        </div>
+      <% end %>
+      <div class="row">
+        <div class="col-12">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
